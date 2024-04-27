@@ -23,6 +23,7 @@ const Task = ({ task, provided }: TaskProps) => {
           <span
             key={tag.title}
             className="px-[10px] py-[2px] text-[13px] font-medium rounded-md"
+            style={{ backgroundColor: tag.bg, color: tag.text }}
           >
             {tag.title}
           </span>
