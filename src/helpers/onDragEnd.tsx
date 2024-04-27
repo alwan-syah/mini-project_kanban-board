@@ -1,10 +1,10 @@
 export const onDragEnd = (result: any, columns: any, setColumns: any) => {
-  if (!result.destination) result;
+  if (!result.destination) return;
 
   const { source, destination } = result;
 
-  if (source.droppableId !== destination.draggableId) {
-    const sourceColumn = columns[source.draggableId];
+  if (source.droppableId !== destination.dropableId) {
+    const sourceColumn = columns[source.droppableId];
     const destColumn = columns[destination.droppableId];
     const sourceItems = [...sourceColumn.items];
     const destItems = [...destColumn.items];
